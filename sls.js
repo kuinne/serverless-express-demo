@@ -25,6 +25,10 @@ app.get('/user/:id', (req, res) => {
         link: 'https://serverless.com'
     })
 })
+// Routes
+app.get(`/feature`, (req, res) => {
+    res.sendFile(path.join(__dirname, 'feature.html'))
+})
 
 app.get('/404', (req, res) => {
     res.status(404).send('Not found')
